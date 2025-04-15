@@ -2,13 +2,18 @@ package main
 
 import (
 	"fmt"
-	"github.com/pablopasquim/playground/Calculate"
+
+	cowsay "github.com/Code-Hex/Neo-cowsay/v2"
 )
 
 func main() {
-
-	fmt.Println(Calc.CalcSum(1, 2))
-	fmt.Println(Calc.CalcSub(1, 2))
-	fmt.Println(Calc.CalcMult(1, 2))
-
+	say, err := cowsay.Say(
+		"FALAAAAAAAAAAA",
+		cowsay.Type("default"),
+		cowsay.BallonWidth(40),
+	)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(say)
 }
